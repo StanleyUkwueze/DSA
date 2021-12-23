@@ -13,19 +13,19 @@ namespace DSA
         }
          static void rotate(int[] arr, int lent)
         {
-             lent = arr.Length;
-            int n = lent - 1;
+            
             int temp = arr[0];
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < lent - 1; i++)
             {
                 arr[i] = arr[i + 1];
-                arr[n] = temp;
+               
             }
+            arr[lent - 1] = temp;
         }
 
         static void PrintArray(int[] arr, int size)
         {
-            size = arr.Length;
+         
             for (int i = 0; i < size; i++)
             {
                 Console.WriteLine(arr[i] + " ");
